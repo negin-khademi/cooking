@@ -15,9 +15,9 @@ function App() {
         <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/recipe/:id" element={<Recipe />} />
+          <Route path="/recipes/:id" element={<Recipe />} />
           <Route path="/search" element={<Search />} />
-          <Route path="/search" element={<Create />} />
+          <Route path="/create" element={<Create />} />
         </Routes>
       </BrowserRouter>
     </div>
