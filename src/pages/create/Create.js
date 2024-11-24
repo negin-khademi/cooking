@@ -40,7 +40,7 @@ export default function Create() {
   }, [data]);
   return (
     <div className="create">
-      <h2 className="page-title">Add n new Recipe</h2>
+      <h2 className="page-title">Add a new Recipe</h2>
 
       <form onSubmit={handleSubmit}>
         <label>
