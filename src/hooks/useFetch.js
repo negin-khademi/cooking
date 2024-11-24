@@ -17,14 +17,13 @@ export const useFetch = (url, method = 'GET') => {
   };
 
   useEffect(() => {
-    console.log('POST request options:', options);
     const controller = new AbortController();
 
     const fetchData = async (fetchOptions) => {
       setIsPending(true);
 
       try {
-        const res = await fetch(url, { fetchOptions, signal: controller.signal });
+        const res = await fetch(url, { ...fetchOptions, signal: controller.signal });
         if (!res.ok) {
           throw new Error(res.statusText);
         }
